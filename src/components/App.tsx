@@ -122,11 +122,11 @@ export default function App() {
           <div className="grid grid-cols-2 gap-3">
             <div className="bg-indigo-600 dark:bg-indigo-500 text-white rounded-2xl p-4">
               <p className="text-xs font-medium opacity-75 mb-1">Par mois</p>
-              <p className="text-2xl font-bold">{totalMonthly.toFixed(2)} $</p>
+              <p className="text-2xl font-bold">{totalMonthly.toFixed(2)} €</p>
             </div>
             <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl p-4">
               <p className="text-xs font-medium text-gray-400 mb-1">Par année</p>
-              <p className="text-2xl font-bold">{totalAnnual.toFixed(2)} $</p>
+              <p className="text-2xl font-bold">{totalAnnual.toFixed(2)} €</p>
             </div>
           </div>
 
@@ -146,8 +146,8 @@ export default function App() {
                     <p className="font-medium truncate">{e.name}</p>
                     <p className="text-xs text-gray-400 mt-0.5">
                       {e.frequency === "mensuel"
-                        ? `${e.amount.toFixed(2)} $/mois · ${(e.amount * 12).toFixed(2)} $/an`
-                        : `${(e.amount / 12).toFixed(2)} $/mois · ${e.amount.toFixed(2)} $/an`}
+                        ? `${e.amount.toFixed(2)} €/mois · ${(e.amount * 12).toFixed(2)} €/an`
+                        : `${(e.amount / 12).toFixed(2)} €/mois · ${e.amount.toFixed(2)} €/an`}
                     </p>
                   </div>
                   <span
@@ -220,7 +220,7 @@ export default function App() {
 
                 <div>
                   <label className="block text-sm text-gray-500 dark:text-gray-400 mb-1">
-                    Montant ($)
+                    Montant (€)
                   </label>
                   <input
                     type="number"
