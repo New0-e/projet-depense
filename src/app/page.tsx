@@ -1,8 +1,5 @@
-import { cookies } from "next/headers";
-import Dashboard from "@/components/Dashboard";
+import App from "@/components/App";
 
-export default async function Home() {
-  const cookieStore = await cookies();
-  const isConnected = !!cookieStore.get("access_token");
-  return <Dashboard isConnected={isConnected} />;
+export default function Home() {
+  return <App />;
 }
